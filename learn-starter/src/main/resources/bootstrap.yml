@@ -1,8 +1,0 @@
-# 集成spring-cloud-context后生效
-spring:
-    application: 
-        name: bob-learn  #项目名称
-    profiles:
-        active: dev  # 开发环境 加载指定的配置文件
-server:
-    port: 8090 #主应用端口
