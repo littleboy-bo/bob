@@ -14,7 +14,7 @@ public class BobLearnService {
     @Resource
     BobLearnMapper bobLearnMapper;
     /**
-     * 根据ifp系统用户号查询平台用户信息
+     * 根据系统用户号查询平台用户信息
      * @param userId
      * @return
      */

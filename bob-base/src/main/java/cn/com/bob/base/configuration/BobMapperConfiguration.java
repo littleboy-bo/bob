@@ -4,6 +4,6 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@MapperScan(basePackages = {"cn.com.bob.learn.*"})
+@MapperScan(basePackages = {"cn.com.bob.*"})
 public class BobMapperConfiguration {
 }

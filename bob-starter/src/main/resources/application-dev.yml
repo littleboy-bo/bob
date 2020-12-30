@@ -12,7 +12,7 @@ logback:
 #========================================================================================================================
 # 数据库连接池信息配置
 #========================================================================================================================
-#---------------oracle--------------
+#===================oracle===================
 #spring:
 #  datasource:
 #    type: com.zaxxer.hikari.HikariDataSource
@@ -29,7 +29,7 @@ logback:
 #        prepStmtCacheSize: 250
 #        prepStmtCacheSqlLimit: 2048
 #        useServerPrepStmts: true
-#----------------mysql----------------
+#===================mysql===================
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver

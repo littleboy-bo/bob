@@ -27,6 +27,7 @@
         <alibaba.version>1.2.7</alibaba.version>
         <hessian.version>4.0.51</hessian.version>
         <oracle.version>12.2.0.1</oracle.version>
+        <mysql.version>8.0.18</mysql.version>
         <hikari.version>3.0.0</hikari.version>
         <mybatis.version>3.4.6</mybatis.version>
         <mybatis-spring.version>2.1.1</mybatis-spring.version>
@@ -95,7 +96,7 @@
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <!--<version>8.0.9-rc</version>-->
-                <version>8.0.18</version>
+                <version>${mysql.version}</version>
             </dependency>
 
             <!-- tools -->
@@ -267,6 +268,11 @@
                             <!--<artifactId>ojdbc8</artifactId>-->
                             <!--<version>${oracle.version}</version>-->
                         <!--</dependency>-->
+                        <dependency>
+                            <groupId>mysql</groupId>
+                            <artifactId>mysql-connector-java</artifactId>
+                            <version>${mysql.version}</version>
+                        </dependency>
                     </dependencies>
                 </plugin>
 
