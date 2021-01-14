@@ -13,7 +13,7 @@
     <groupId>cn.com.bob</groupId>
     <artifactId>bob</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>a
+    <version>1.0-SNAPSHOT</version>
     <name>bob's project Parent</name>
 
     <modules>
@@ -85,8 +85,6 @@
                 <artifactId>spring-boot-starter-actuator</artifactId>
                 <version>${boot.version}</version>
             </dependency>
-
-
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-jdbc</artifactId>
