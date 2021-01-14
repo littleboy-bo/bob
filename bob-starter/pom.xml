@@ -9,8 +9,6 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-
-
     <artifactId>bob-starter</artifactId>
     <description>bob启动工程</description>
     <packaging>jar</packaging>
@@ -35,6 +33,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+
+        <!-- spring cloud start -->
+        <!-- eureka client -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <!-- spring cloud end -->
 
         <!-- oracle driver -->
         <!--<dependency>

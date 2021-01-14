@@ -2,17 +2,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.3.RELEASE</version>
+    </parent>
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.com.bob</groupId>
     <artifactId>bob</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>a
+    <name>bob's project Parent</name>
 
     <modules>
         <module>bob-base</module>
         <module>bob-tools</module>
         <module>bob-service</module>
-        <!--<module>learn-dependencies</module>-->
+        <module>bob-dependencies</module>
         <module>bob-starter</module>
     </modules>
 
@@ -20,9 +28,10 @@
         <project.encoding>UTF-8</project.encoding>
         <bob.version>1.0-SNAPSHOT</bob.version>
         <jdk.version>1.8</jdk.version>
-        <spring.version>2.1.2.RELEASE</spring.version>
+<!--        <spring.version>2.0.3.RELEASE</spring.version>-->
+        <boot.version>2.0.3.RELEASE</boot.version>
         <aspect.version>1.8.3</aspect.version>
-        <spring-cloud.version>Finchley.SR1</spring-cloud.version>
+        <spring-cloud.version>Finchley.SR2</spring-cloud.version>
         <logback.version>1.2.3</logback.version>
         <alibaba.version>1.2.7</alibaba.version>
         <hessian.version>4.0.51</hessian.version>
@@ -61,28 +70,28 @@
             </dependency>
 
             <!-- spring boot -->
-            <dependency>
+            <!--<dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
-                <version>${spring.version}</version>
+                <version>${boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-                <version>${spring.version}</version>
+                <version>${boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-actuator</artifactId>
-                <version>${spring.version}</version>
+                <version>${boot.version}</version>
             </dependency>
 
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-jdbc</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
+                <version>${boot.version}</version>
+            </dependency>-->
 
             <!-- ORACLE DRIVER -->
             <!--<dependency>
@@ -90,6 +99,15 @@
                 <artifactId>ojdbc8</artifactId>
                 <version>${oracle.version}</version>
             </dependency>-->
+
+            <!-- spring cloud -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
             <!-- mysql driver -->
             <dependency>
@@ -124,16 +142,6 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis-spring.version}</version>
             </dependency>
-            <!--<dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis</artifactId>
-                <version>${mybatis.version}</version>
-            </dependency>-->
-            <!--<dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis-spring</artifactId>
-                <version>${mybatis-spring.version}</version>
-            </dependency>-->
 
             <!-- Aspect (AOP) -->
             <dependency>
@@ -150,14 +158,6 @@
                 <version>${hessian.version}</version>
             </dependency>
 
-            <!-- spring cloud -->
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
 
             <!-- log -->
             <dependency>

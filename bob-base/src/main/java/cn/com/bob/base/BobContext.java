@@ -1,8 +1,4 @@
 /**
- * <p>Title: BobContext.java</p>
- * <p>Description: </p>
- * <p>Copyright: Copyright (c) 2014</p>
- * <p>Company: dcits</p>
  *
  * @author songbo
  * @date 2014年11月13日 下午4:36:49

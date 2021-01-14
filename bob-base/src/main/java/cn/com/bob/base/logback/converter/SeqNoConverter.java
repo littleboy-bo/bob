@@ -4,8 +4,6 @@ import ch.qos.logback.classic.pattern.ClassicConverter;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import cn.com.bob.base.BobContext;
 import cn.com.bob.base.constants.BobConstants;
-import cn.com.bob.base.BobContext;
-import cn.com.bob.base.constants.BobConstants;
 
 /**
  * logback 自定义转换器

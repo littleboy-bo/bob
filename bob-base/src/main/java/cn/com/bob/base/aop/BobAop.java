@@ -2,7 +2,6 @@ package cn.com.bob.base.aop;
 
 
 import cn.com.bob.base.aop.annotation.BobService;
-import cn.com.bob.base.aop.annotation.BobService;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;

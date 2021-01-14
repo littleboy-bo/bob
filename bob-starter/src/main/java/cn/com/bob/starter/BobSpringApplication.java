@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
@@ -12,9 +13,10 @@ import org.springframework.core.env.Environment;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-@SpringBootApplication(scanBasePackages = {"cn.com.bob.base.exception"})
+@SpringBootApplication
 @ComponentScan(basePackages = {"cn.com.bob"})
 @EnableConfigurationProperties()
+@EnableEurekaClient
 //@EnableFeignClients
 public class BobSpringApplication {
 
@@ -29,9 +31,10 @@ public class BobSpringApplication {
             protocol = "https";
         }
         log.info("\n-------------------------------------------------------------\n\t" +
-                          "Application '{}' is running! Access URLs:\n\t" +
-                          "Local: \t\t{}://localhost:{}\n\t" +
-                          "External: \t{}://{}:{}\n\t" +
+                          "Application '{}' is running!\n\t" +
+                          "Access URLs:\n\t" +
+                          "\tLocal: \t\t{}://localhost:{}\n\t" +
+                          "\tExternal: \t{}://{}:{}\n\t" +
                           "Profile(s):\t{}\n-------------------------------------------------------------",
                 //集成spring-cloud-context后生效
                 //env.getProperty("spring.application.name"),
